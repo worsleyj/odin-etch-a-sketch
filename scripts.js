@@ -10,7 +10,8 @@ function generate() {
         for(j = 0; j < squares; j++) {
             let square = document.createElement("div");
             square.addEventListener("mouseover", () => {
-                square.style.backgroundColor = "green";
+                const randomColor = Math.floor(Math.random()*16777215).toString(16);
+                square.style.backgroundColor = "#" + randomColor;
             })
             square.addEventListener("click", () => {
                 square.style.backgroundColor = "white";
@@ -21,6 +22,8 @@ function generate() {
     }
     
 }
+
+
 
 function resetGrid() {
     while(container.firstChild) {
