@@ -1,6 +1,7 @@
 let squares = 16; // how many pixels to add to grid, max of 100
 const rgbButton = document.querySelector("#rgb-button");
 const monoButton = document.querySelector("#mono-button");
+const logo = document.querySelector("h2");
 const container = document.querySelector("#container");
 
 function generateRGB() {
@@ -13,6 +14,8 @@ function generateRGB() {
             square.addEventListener("mouseover", () => {
                 const randomColor = Math.floor(Math.random()*16777215).toString(16);
                 square.style.backgroundColor = "#" + randomColor;
+                rgbButton.style.backgroundColor = "#" + randomColor;
+                logo.style.color = "#" + randomColor;
             })
             square.addEventListener("click", () => {
                 square.style.backgroundColor = "white";
