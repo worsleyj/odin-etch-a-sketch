@@ -7,6 +7,7 @@ html, body {
     height: 90%;
     flex-direction: column;
     border: solid black 10px;
+    justify-content: center;
 }
 
 #header {
@@ -16,7 +17,17 @@ html, body {
     padding: 10px;
     flex-direction: row;
 }
-
+h2 {
+    align-self: flex-start;
+    flex: 1;
+    color: aliceblue;
+    padding-left: 20px;
+}
+h3 {
+    padding-left: 25px;
+    padding-right: 25px;
+    color: aliceblue;
+}
 .column {
     flex: 1;
     display: flex;
@@ -29,4 +40,9 @@ html, body {
 #grid-button {
     height: 2%;
     text-align: center;
+}
+
+button {
+    width: 100px;
+    height: 60px;
 }
