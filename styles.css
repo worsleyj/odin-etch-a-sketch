@@ -5,7 +5,10 @@
 
 .square {
     border: solid black;
-    width: 25%;
     height: 150px;
     box-sizing: border-box;
+}
+
+#grid-button {
+    text-align: center;
 }
