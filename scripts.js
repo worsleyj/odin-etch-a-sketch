@@ -1,5 +1,6 @@
 let squares = 16; // how many pixels to add to grid, max of 100
 const gridButton = document.querySelector("#grid-button");
+const monoButton = document.querySelector("#mono-button");
 const container = document.querySelector("#container");
 
 function generate() {
@@ -23,7 +24,25 @@ function generate() {
     
 }
 
-
+function generateMonochrome() {
+    for(i = 0; i < squares; i++) {
+        let column = document.createElement("div");
+        column.className = "column";
+        container.appendChild(column);
+        for(j = 0; j < squares; j++) {
+            let square = document.createElement("div");
+            square.addEventListener("mouseover", () => {
+                square.style.backgroundColor = "black"
+            })
+            square.addEventListener("click", () => {
+                square.style.backgroundColor = "white";
+            })
+            square.className = "square";
+            column.appendChild(square);
+        }
+    }
+    
+}
 
 function resetGrid() {
     while(container.firstChild) {
@@ -44,4 +63,16 @@ gridButton.addEventListener("click", () => {
     }
 })
 
+monoButton.addEventListener("click", () => {
+    squares = prompt("What size (x by x) should the grid be? Must be below 100.");
+    if(squares <= 100) {
+        resetGrid();
+        generateMonochrome();
+    } else {
+        square = 16;
+        resetGrid();
+        generateMonochrome();
+        alert("Size too big! Must be below 100 squares.")
+    }
+})
 generate()

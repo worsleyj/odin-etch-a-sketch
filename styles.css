@@ -6,7 +6,7 @@ html, body {
     display: flex;
     height: 90%;
     flex-direction: column;
-
+    border: solid black 10px;
 }
 
 #header {
@@ -24,8 +24,6 @@ html, body {
 .square {
     border: black;
     flex: 1;
-    /* height: 150px;
-    box-sizing: border-box; */
 }
 
 #grid-button {
