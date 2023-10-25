@@ -33,7 +33,7 @@ h3 {
     display: flex;
 }
 .square {
-    border: black;
+    border: solid black 1px;
     flex: 1;
 }
 
