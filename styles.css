@@ -10,6 +10,7 @@ html, body {
     justify-content: center;
     width: 60%;
     margin: auto;
+    border-radius: 0px 0px 12px 12px;
 }
 
 #header {
@@ -21,7 +22,6 @@ html, body {
     width: 70%;
     margin: auto;
     border-radius: 12px;
-
 }
 h2 {
     align-self: flex-start;
