@@ -16,8 +16,7 @@ function generateRGB() {
             square.addEventListener("mouseover", () => {
                 const randomColor = Math.floor(Math.random()*16777215).toString(16); // generates a random color hex
                 square.style.backgroundColor = "#" + randomColor; // changes "pixels" of etch-a-sketch to randomized colors
-                rgbButton.style.backgroundColor = "white"; // changes menu items to match the current random color
-                rgbButton.style.backgroundColor = "#" + randomColor;
+                rgbButton.style.backgroundColor = "#" + randomColor; // changes menu items to match the current random color
                 monoButton.style.backgroundColor = "#" + randomColor;
                 logo.style.color = "#" + randomColor;
                 choose.style.color = "#" + randomColor;
