@@ -14,8 +14,9 @@ function generateRGB() {
         for(j = 0; j < squares; j++) {
             let square = document.createElement("div");
             square.addEventListener("mouseover", () => {
-                const randomColor = Math.floor(Math.random()*16777215).toString(16);
-                square.style.backgroundColor = "#" + randomColor;
+                const randomColor = Math.floor(Math.random()*16777215).toString(16); // generates a random color hex
+                square.style.backgroundColor = "#" + randomColor; // changes "pixels" of etch-a-sketch to randomized colors
+                rgbButton.style.backgroundColor = "white"; // changes menu items to match the current random color
                 rgbButton.style.backgroundColor = "#" + randomColor;
                 monoButton.style.backgroundColor = "#" + randomColor;
                 logo.style.color = "#" + randomColor;
@@ -39,8 +40,8 @@ function generateMonochrome() {
         for(j = 0; j < squares; j++) {
             let square = document.createElement("div");
             square.addEventListener("mouseover", () => {
-                square.style.backgroundColor = "black"
-                rgbButton.style.backgroundColor = "white";
+                square.style.backgroundColor = "black"  // changes "pixels" of etch-a-sketch
+                rgbButton.style.backgroundColor = "white"; // changes menu items back to black and white
                 monoButton.style.backgroundColor = "white";
                 logo.style.color = "white";
                 choose.style.color = "white";
@@ -70,7 +71,7 @@ rgbButton.addEventListener("click", () => {
         square = 16;
         resetGrid();
         generateRGB();
-        alert("Size too big! Must be below 100 squares.")
+        alert("Size too big! Must be below 100.")
     }
 })
 
@@ -83,7 +84,8 @@ monoButton.addEventListener("click", () => {
         square = 16;
         resetGrid();
         generateMonochrome();
-        alert("Size too big! Must be below 100 squares.")
+        alert("Size too big! Must be below 100.")
     }
 })
-generateRGB()
+
+generateRGB() // initial setup for etch-a-sketch
