@@ -10,7 +10,7 @@ html, body {
     justify-content: center;
     width: 60%;
     margin: auto;
-    border-radius: 0px 0px 12px;
+    border-radius: 0px 0px 12px 12px;
 }
 
 #header {
