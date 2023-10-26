@@ -1,7 +1,9 @@
 let squares = 16; // how many pixels to add to grid, max of 100
 const rgbButton = document.querySelector("#rgb-button");
 const monoButton = document.querySelector("#mono-button");
+const prev = document.querySelector("#prev-color");
 const logo = document.querySelector("h2");
+const choose = document.querySelector("h3");
 const container = document.querySelector("#container");
 
 function generateRGB() {
@@ -15,7 +17,9 @@ function generateRGB() {
                 const randomColor = Math.floor(Math.random()*16777215).toString(16);
                 square.style.backgroundColor = "#" + randomColor;
                 rgbButton.style.backgroundColor = "#" + randomColor;
+                monoButton.style.backgroundColor = "#" + randomColor;
                 logo.style.color = "#" + randomColor;
+                choose.style.color = "#" + randomColor;
             })
             square.addEventListener("click", () => {
                 square.style.backgroundColor = "white";
@@ -37,7 +41,9 @@ function generateMonochrome() {
             square.addEventListener("mouseover", () => {
                 square.style.backgroundColor = "black"
                 rgbButton.style.backgroundColor = "white";
+                monoButton.style.backgroundColor = "white";
                 logo.style.color = "white";
+                choose.style.color = "white";
             })
             square.addEventListener("click", () => {
                 square.style.backgroundColor = "white";
