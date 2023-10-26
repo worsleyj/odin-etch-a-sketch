@@ -33,6 +33,10 @@ function generateRGB() {
 
 function generateMonochrome() {
     for(i = 0; i < squares; i++) {
+        rgbButton.style.backgroundColor = "white"; // changes menu items back to black and white
+        monoButton.style.backgroundColor = "white";
+        logo.style.color = "white";
+        choose.style.color = "white";
         let column = document.createElement("div");
         column.className = "column";
         container.appendChild(column);
@@ -40,10 +44,6 @@ function generateMonochrome() {
             let square = document.createElement("div");
             square.addEventListener("mouseover", () => {
                 square.style.backgroundColor = "black"  // changes "pixels" of etch-a-sketch
-                rgbButton.style.backgroundColor = "white"; // changes menu items back to black and white
-                monoButton.style.backgroundColor = "white";
-                logo.style.color = "white";
-                choose.style.color = "white";
             })
             square.addEventListener("click", () => {
                 square.style.backgroundColor = "white";
