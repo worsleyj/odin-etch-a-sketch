@@ -36,6 +36,8 @@ function generateMonochrome() {
             let square = document.createElement("div");
             square.addEventListener("mouseover", () => {
                 square.style.backgroundColor = "black"
+                rgbButton.style.backgroundColor = "white";
+                logo.style.color = "white";
             })
             square.addEventListener("click", () => {
                 square.style.backgroundColor = "white";
