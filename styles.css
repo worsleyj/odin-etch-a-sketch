@@ -20,11 +20,11 @@ body {
     text-align: center;
 }
 
-.hover-toggle {
+.hover-toggle, .bw-toggle {
     background-color: white;
 }
 
-.click-toggle {
+.click-toggle, .rgb-toggle {
     background-color: grey;
 }
 
@@ -63,3 +63,4 @@ button {
     /* width: 100%; */
     text-align: center;
 }
+
