@@ -8,6 +8,11 @@ function generateSquares(size) {
         div.textContent = "test";
         div.style.width = 100/size + "%";
         div.style.height = "50px";
+
+        div.addEventListener("mouseover", () => {
+            div.style.background = "black";
+        })
+
         squareContainer.appendChild(div);
     }
 }
