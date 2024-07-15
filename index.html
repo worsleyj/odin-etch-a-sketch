@@ -7,12 +7,24 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <button class="new-grid">New Grid</button>
-    <button class="hover-toggle">Change on Hover</button>
-    <button class="click-toggle">Change on Click</button>
-    <div class="container">
-
+    <div class="nav-bar">    
+        <div class="grid-buttons">
+            <button class="new-grid">New Grid</button>
+            <button class="clear-grid">Clear Grid</button>
+        </div>
+        <h1 class="title">Etch-a-Sketch!</h1>
+        <div class="toggle-container">
+            <div class="mouseover-toggles">
+                <button class="hover-toggle">Change on Hover</button>
+                <button class="click-toggle">Change on Click</button>
+            </div>
+            <div class="color-toggles">
+                <button class="bw-toggle">B/W</button>
+                <button class="rgb-toggle">RGB</button>
+            </div>
+        </div>
     </div>
+    <div class="container"></div>
     <script src="script.js"></script>
 </body>
 </html>

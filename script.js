@@ -1,10 +1,19 @@
 const squareContainer = document.querySelector(".container");
 const newGridBtn = document.querySelector(".new-grid");
+const clearGridBtn = document.querySelector(".clear-grid");
 const hoverToggle = document.querySelector(".hover-toggle");
 const clickToggle = document.querySelector(".click-toggle");
 
 let gridSize = 16;
 let inputType = "mouseover";
+
+newGridBtn.addEventListener("click", () => {
+    selectSize();
+})
+
+clearGridBtn.addEventListener("click", () => {
+    generateSquares(gridSize);
+})
 
 hoverToggle.addEventListener("click", () => {
     inputType = "mouseover";
@@ -18,10 +27,6 @@ clickToggle.addEventListener("click", () => {
     clickToggle.style.background = "white";
     hoverToggle.style.background = "grey";
     generateSquares(gridSize);
-})
-
-newGridBtn.addEventListener("click", () => {
-    selectSize();
 })
 
 function selectSize() {
@@ -48,10 +53,11 @@ function generateSquares(gridSize) {
         const div = document.createElement("div");
         div.style.width = 100/gridSize + "%";
         div.style.height = "50px";
+        div.style.background = "white";
 
         div.addEventListener(inputType, () => {
-            // div.style.background = "black";
-            div.style.background = "rgb(0 0 0 / 40%)";
+            randomColor = Math.floor(Math.random()*16777215).toString(16);
+            div.style.background = "#" + randomColor;
         })
 
         squareContainer.appendChild(div);
