@@ -1,4 +1,9 @@
 const squareContainer = document.querySelector(".container");
+const newGridBtn = document.querySelector(".new-grid");
+
+newGridBtn.addEventListener("click", () => {
+    selectSize();
+})
 
 function selectSize() {
     let gridSize = prompt("What should the size of the grid be? (1-100)", 16)
@@ -27,4 +32,4 @@ function generateSquares(gridSize) {
     }
 }
 
-selectSize();
+generateSquares(16)
