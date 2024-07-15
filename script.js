@@ -1,11 +1,15 @@
 const squareContainer = document.querySelector(".container");
 
 function generateSquares(size) {
-    for (let i = 0; i < size; i++) {
+    let sizeSquared = size ** 2;
+
+    for (let i = 0; i < sizeSquared; i++) {
         const div = document.createElement("div");
         div.textContent = "test";
+        div.style.width = 100/size + "%";
+        div.style.height = "50px";
         squareContainer.appendChild(div);
     }
 }
 
-generateSquares(16);
+generateSquares(4);
